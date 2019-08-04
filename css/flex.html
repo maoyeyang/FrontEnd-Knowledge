@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex 布局</title>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    /* 容器的flex选项 */
+    /* justify-content 水平排列6种选项 */
+    /* align-content 垂直排布6种选项 适用于多行的容器垂直排列 */
+    /* align-items 垂直排布5种选项 适用于单行的容器垂直排列*/
+    /* flex-direction 决定主轴的方向 4种选项 */
+    /* flex-wrap 换不换行 3中选项 */
+    /* flex-flow  (flex-direction属性和flex-wrap) 的缩写  */
+    #d1 {
+      transform: translate(100px, 100px);
+      width: 200px;
+      height: 100px;
+      display: flex;
+
+
+      /* flex-start(默认) 靠左对齐 */
+      /* justify-content: flex-start; */
+      /* center 居中 */
+      /* justify-content: center; */
+      /* flex-end 靠右对齐 */
+      /* justify-content: flex-end; */
+      /* space-between 两端对齐 子项间隔都相等 */
+      /* justify-content: space-between; */
+      /* space-around 每个子项两侧的间隔相等 */
+      /* justify-content: space-around; */
+      /* space-evenly 每个间隔相等 */
+      /* justify-content: space-evenly; */
+
+      /* stretch (默认) 占满整个容器的高度 */
+      /* align-content: stretch */
+      /* flex-start 靠顶部对齐 */
+      /* align-content: flex-start */
+      /* flex-end 靠底对齐 */
+      /* align-content: flex-end */
+      /* center 居中 */
+      /* align-content: center; */
+      /* spance-between 同justify-content */
+      /* align-content: space-between */
+      /* spance-around  同justify-content */
+      /* align-content: space-around  */
+
+      /* stretch (默认) 占满整个容器的高度 */
+      /* align-items: stretch */
+      /* flex-start 靠顶部对齐 */
+      /* align-items: flex-start */
+      /* flex-end 靠底对齐 */
+      /* align-items: flex-end */
+      /* center 居中 */
+      /* align-items: center; */
+      /* baseline 基线对齐 */
+      /* align-items: baseline */
+
+      /* row(默认)  主轴的方向 横轴 左到右 */
+      /* flex-direction: row; */
+      /* row-reverse 主轴的方向 横轴 右到左 */
+      /* flex-direction: row-reverse; */
+      /* column 主轴的方向 纵轴 左到右 */
+      /* flex-direction: column; */
+      /* column-reverse 主轴的方向 纵轴 右到左 */
+      /* flex-direction: column-reverse; */
+
+      /* nowrap(默认) 不换行  */
+      /* flex-wrap: nowrap; */
+      /* wrap 换行  */
+      /* flex-wrap: wrap; */
+      /* wrap-reverse 换行 行颠倒  */
+      /* flex-wrap: wrap-reverse; */
+
+      /* flex-flow:column nowrap; */
+
+      background-color: pink;
+    }
+
+    /* 子项的flex 选项 */
+    /* order 定义子项的排列顺序 从小到大 默认为0 */
+    /* flex-grow 定义子项的放大比例(容器空间有余时生效) 默认为0 不放大 */
+    /* flex-shrink 定义子项的缩小比例 (容器空间不足时生效)默认为1 设置为0时,不缩小*/
+    /* flex-basis 设置子项的宽度 默认为auto 即原本大小 */
+    /* flex (flex-grow，flex-shrink和flex-basis) 缩写 一般写法 flex 0 0 50px */
+    /* align-self 允许单个子项有与子项不一样的对齐方式 可覆盖align-items 
+    默认值为auto 表示继承父元素的align-items属性，如果没有父元素，等同于stretch。 */
+    #child1 {
+      /* order: 1; */
+      /* flex-grow: 5; */
+      /* flex-shrink: 2; */
+      /* flex-basis: 30px; */
+      flex: 0 0 50px;
+      align-self: auto;
+    }
+
+    #child1,
+    #child2,
+    #child3 {
+      width: 50px;
+      background-color: yellow;
+      text-align: center;
+      line-height: 100px
+    }
+  </style>
+</head>
+
+<body>
+  <div id="d1">
+    <div id="child1">1</div>
+    <div id="child2">2</div>
+    <div id="child3">3</div>
+  </div>
+</body>
+
+</html>
