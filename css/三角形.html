@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css画三角形 箭头</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    #d1 {
+      transform: translate(100px, 100px);
+      width: 0px;
+      height: 0px;
+      border-bottom: 50px solid red;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+    }
+
+    #d2 {
+      transform: translate(100px, 200px);
+      position: relative;
+    }
+
+    #d2:before,
+    #d2:after {
+      position: absolute;
+      content: '';
+      border-left: 50px transparent solid;
+      border-right: 50px transparent solid;
+    }
+
+    #d2:before {
+      border-bottom: 50px #0099CC solid;
+    }
+
+    #d2:after {
+      top: 3px;
+      border-bottom: 50px #fff solid;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="d1"></div>
+  <div id="d2"></div>
+</body>
+
+</html>
